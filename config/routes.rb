@@ -137,7 +137,7 @@ Loomio::Application.routes.draw do
     put    ':id(/:slug)', action: 'update'
     delete ':id(/:slug)', action: 'destroy'
 
-    post ':id/preview_version/(:version_id)', action: '#preview_version', as: 'preview_version_discussion'
+    post ':id/preview_version/(:version_id)', action: 'preview_version', as: 'preview_version_discussion'
     post 'update_version/:version_id',        action: 'update_version',   as: 'update_version_discussion'
   end
 
@@ -206,6 +206,7 @@ Loomio::Application.routes.draw do
     get :services
     get :terms_of_service
     get :third_parties
+    get :try_it
     get :wallets
     get :browser_not_supported
   end
