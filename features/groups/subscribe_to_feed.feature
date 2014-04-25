@@ -16,5 +16,5 @@ Feature: Subscribe to feed
   Scenario: Clicking the Subscribe to feed link returns an xml feed
   	Given there is a discussion in a public group
   	And I visit the group page
-  	And I click on the subscribe to feed link
+  	And I visit the subscribe to feed link
   	Then I should see an xml feed

@@ -10,5 +10,7 @@ class PublicGroupsController < ApplicationController
       @groups = @groups.sort_by_popularity
     end
     @groups = @groups.page(params[:page])
+    
+    @feed_url = public_groups_url format: :xml
   end
 end

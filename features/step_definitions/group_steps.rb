@@ -175,8 +175,8 @@ When(/^I visit my group's memberships index$/) do
   click_on 'More'
 end
 
-When(/^I click on the subscribe to feed link$/) do
-  click_on('Subscribe to feed')
+When(/^I visit the subscribe to feed link$/) do
+  visit group_path(@group, format: :xml)
 end
 
 Then /^I email the group members$/ do
@@ -211,11 +211,11 @@ Then /^the group has another subgroup with a discussion I am an admin of$/ do
 end
 
 Then /^I should see a subscribe to feed link$/ do
-  page.should have_css('#rss-feed-link')
+  page.should have_css('.rss-link', visible: false)
 end
 
 Then /^I should not see a subscribe to feed link$/ do
-  page.should_not have_css('#rss-feed-link')
+  page.should_not have_css('.rss-link', visible: false)
 end
 
 Then /^I should see an xml feed$/ do                                                                                                                            

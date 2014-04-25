@@ -9,7 +9,6 @@
       = render 'invite_button', group: @group, discussion: @discussion
     = render 'options_dropdown', group: @group
     = request_membership_button(@group)
-    = render 'rss_feed_button' if @group.privacy_public?
 .row.main-content
   =render 'discussions/discussion_list'
   %section.span3
